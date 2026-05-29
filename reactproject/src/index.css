@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+@font-face {
+  font-family: font1;
+  src: url(../public/fonts/Lausanne-300.woff2);
+}
+@font-face {
+  font-family: font2;
+  src: url(../public/fonts/Lausanne-500.woff2);
+}
+@font-face {
+  font-family: font3;
+  src: url(../public/fonts/MonsieurLaDoulaise-Regular.ttf) format('truetype');
+}
+body{
+  color: whitesmoke
+}
+.moveX{
+  animation-name: moveAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+.movelink{
+  opacity: 0;
+  transform: all ease 0.4s;
+}
+
+
+.link:hover .movelink{
+  opacity: 1;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 9s linear infinite;
+}
+@keyframes moveAnimation {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+  
+  
+}
